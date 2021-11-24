@@ -1,1 +1,1 @@
-vpc_id=""
+vpc_id="vpc-0a1c68a03d52014a0"
