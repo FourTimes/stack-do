@@ -1,4 +1,4 @@
-module "downloader-az1" {
+module "subnet-downloader-az1" {
   source            = "../module/aws-subnets"
   vpc_id            = data.aws_vpc.vpc_id.id
   availability_zone = "ap-southeast-1b"
@@ -13,7 +13,7 @@ module "downloader-az1" {
   availability_zone    = "ap-southeast-1b"
   instance_type        = "c4.xlarge"
   key_name             = "karthi"
-  subnet_id            = module.downloader-az1.subnet_id
+  subnet_id            = module.subnet-downloader-az1.subnet_id
   vpc_id               = data.aws_vpc.vpc_id.id
   security_group_name  = "PMP-SG-Stock-WCAPP-az1"
 

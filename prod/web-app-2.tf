@@ -1,4 +1,4 @@
-module "SA_REWEB_AZ2_SUBNET" {
+module "subnet-SA_REWEB_AZ2_SUBNET" {
   source                = "../module/aws-subnets"
   vpc_id                = data.aws_vpc.vpc_id.id
   availability_zone     = "ap-southeast-1a"
@@ -13,7 +13,7 @@ module "SA_REWEB_AZ2" {
   availability_zone    = "ap-southeast-1a"
   instance_type        = "c4.xlarge"
   key_name             = "karthi"
-  subnet_id            = module.SA_REWEB_AZ2_SUBNET.subnet_id
+  subnet_id            = module.subnet-SA_REWEB_AZ2_SUBNET.subnet_id
   vpc_id               = data.aws_vpc.vpc_id.id
   security_group_name  = "PMP-SG-Stock-Webserver-az2"
 
