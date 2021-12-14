@@ -3,6 +3,7 @@ module "web_subnet_22" {
   vpc_id                = data.aws_vpc.vpc_id.id
   availability_zone     = "ap-southeast-1a"
   subnet_cidr_block     = "10.148.70.32/27"
+  subnet_name           = "PROD-Stock-Webserver-az2"
   additional_tags       = {}
 }
 

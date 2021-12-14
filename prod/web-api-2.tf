@@ -3,6 +3,7 @@ module "subnet-api-az2" {
   vpc_id            = data.aws_vpc.vpc_id.id
   availability_zone = "ap-southeast-1a"
   subnet_cidr_block = "10.148.70.96/27"
+  subnet_name       = "PROD-Stock-WCFAPI-az2"
   additional_tags   = {}
 }
 
