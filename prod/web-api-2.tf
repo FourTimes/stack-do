@@ -1,8 +1,8 @@
-module "subnet-web-api-az2" {
+module "subnet-api-az2" {
   source            = "../module/aws-subnets"
   vpc_id            = data.aws_vpc.vpc_id.id
   availability_zone = "ap-southeast-1a"
-  subnet_cidr_block = "10.148.70.97/27"
+  subnet_cidr_block = "10.148.70.96/27"
   additional_tags   = {}
 }
 
@@ -11,8 +11,8 @@ module "web-api-az2" {
   ami                  = "ami-06acd7cbe65da0fde"
   availability_zone    = "ap-southeast-1a"
   instance_type        = "c4.xlarge"
-  key_name             = "karthi"
-  subnet_id            = module.subnet-web-api-az2.subnet_id
+  key_name             = "sa_api_stack"
+  subnet_id            = module.subnet-api-az2.subnet_id
   vpc_id               = data.aws_vpc.vpc_id.id
   security_group_name  = "PMP-SG-Stock-WCFAPI-az2"
   additional_tags = {

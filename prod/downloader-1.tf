@@ -12,7 +12,7 @@ module "downloader-az1" {
   ami                  = "ami-06acd7cbe65da0fde"
   availability_zone    = "ap-southeast-1b"
   instance_type        = "c4.xlarge"
-  key_name             = "karthi"
+  key_name             = "sa_app_stack"
   subnet_id            = module.subnet-downloader-az1.subnet_id
   vpc_id               = data.aws_vpc.vpc_id.id
   security_group_name  = "PMP-SG-Stock-WCAPP-az1"

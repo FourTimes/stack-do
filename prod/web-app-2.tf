@@ -1,8 +1,8 @@
-module "subnet-SA_REWEB_AZ2_SUBNET" {
+module "web_subnet_22" {
   source                = "../module/aws-subnets"
   vpc_id                = data.aws_vpc.vpc_id.id
   availability_zone     = "ap-southeast-1a"
-  subnet_cidr_block     = "10.148.70.33/27"
+  subnet_cidr_block     = "10.148.70.32/27"
   additional_tags       = {}
 }
 
@@ -12,8 +12,8 @@ module "SA_REWEB_AZ2" {
   ami                  = "ami-06acd7cbe65da0fde"
   availability_zone    = "ap-southeast-1a"
   instance_type        = "c4.xlarge"
-  key_name             = "karthi"
-  subnet_id            = module.subnet-SA_REWEB_AZ2_SUBNET.subnet_id
+  key_name             = "sa_web_stack"
+  subnet_id            = module.web_subnet_22.subnet_id
   vpc_id               = data.aws_vpc.vpc_id.id
   security_group_name  = "PMP-SG-Stock-Webserver-az2"
 
